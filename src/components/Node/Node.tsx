@@ -1,15 +1,19 @@
 import React from "react";
 
 type Props = {
-  text: string;
   children: React.ReactNode;
+  empty?: true | false;
+  lastNode?: true | false;
 };
 
-function Node({ text, children }: Props) {
+function Node({ children, lastNode = false, empty = false }: Props) {
   return (
-    <div>
-      {text}
-      <div>{children}</div>
+    <div
+      className={`relative ${!empty && "rounded-full w-2 h-2 bg-teal mx-1"} ${
+        lastNode && "-left-[80px]"
+      } my-auto`}
+    >
+      {children}
     </div>
   );
 }
