@@ -1,14 +1,10 @@
-import React from 'react';
-import family from './family.svg';
+import React from "react";
+import TimeLine from "./components/TimeLine/TimeLine";
 
 function App() {
   return (
     <main>
-     <div 
-        style={{background: "#173F4B", width: "130px", height: "136px", boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.25)"}}>
-          <img src={family} alt="Family" />
-          <p style={{textAlign: "center"}}>Baby's birth</p>
-     </div>
+      <TimeLine />
     </main>
   );
 }
